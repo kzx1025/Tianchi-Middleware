@@ -1,0 +1,23 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <Loggers>
+        <logger name="org.apache.storm" level="OFF"/>
+        <logger name="org.apache.zookeeper" level="OFF"/>
+    </Loggers>
+
+    <logger name="org.apache.storm" level="OFF"/>
+    <logger name="org.apache.zookeeper" level="OFF"/>
+    <logger name="backtype.storm" level="OFF" />
+<!--    <logger name="com.alibaba.jstorm" level="OFF" />-->
+    <logger name="org.apache.curator" level="OFF"/>
+
+</configuration>
